@@ -1,0 +1,126 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #6fb8ff, #ff9ed8);
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#yesBtn {
+  background: #ff4fa1;
+  color: white;
+}
+
+#noBtn {
+  background: white;
+  color: #ff4fa1;
+  position: relative;
+}
+
+.yay-video {
+  width: 220px;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+.gallery-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 350px;
+}
+
+.gallery-3 img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.gallery-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.gallery-2 img {
+  width: 160px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.gallery-2 .left {
+  transform: rotate(-6deg);
+}
+
+.gallery-2 .right {
+  transform: rotate(6deg);
+}
+
+.long-text {
+  max-width: 360px;
+  line-height: 1.7;
+}
+
+.coupon-video {
+  width: 280px;
+  border-radius: 20px;
+}
+
+.love-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 25px;
+  max-width: 380px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  margin: 20px 0;
+}
+
+.love-card {
+  border: 1px solid rgba(255,255,255,0.3);
+}
