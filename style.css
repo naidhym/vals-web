@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 h1, h2, h3 {
@@ -151,26 +151,38 @@ button {
 .love-card {
   border: 1px solid rgba(255,255,255,0.3);
 }
+/* ===== FLOATING PASTEL BUBBLES ===== */
 
-.hearts::before,
-.hearts::after {
-  content: "💗 💙 💖 💞 💘";
+.bubbles {
   position: fixed;
-  top: -10%;
+  top: 0;
   left: 0;
   width: 100%;
-  font-size: 24px;
-  animation: floatHearts 15s linear infinite;
-  opacity: 0.6;
+  height: 100%;
+  overflow: hidden;
   pointer-events: none;
+  z-index: 0;
 }
 
-@keyframes floatHearts {
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.25;
+  animation: floatUp linear infinite;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatUp {
   0% {
-    transform: translateY(0);
+    transform: translateY(100vh) translateX(0);
   }
   100% {
-    transform: translateY(120vh);
+    transform: translateY(-20vh) translateX(50px);
   }
 }
 
@@ -180,10 +192,6 @@ h1 {
 
 h2 {
   font-size: 2rem;
-}
-
-button {
-  font-family: 'Baloo 2', cursive;
 }
 
 .page {
