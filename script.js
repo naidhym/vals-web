@@ -32,24 +32,8 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-function confettiEffect() {
-  for (let i = 0; i < 30; i++) {
-    const conf = document.createElement("div");
-    conf.innerText = "💖";
-    conf.style.position = "fixed";
-    conf.style.left = Math.random() * window.innerWidth + "px";
-    conf.style.top = "-20px";
-    conf.style.fontSize = "20px";
-    conf.style.animation = "fall 3s linear forwards";
-    document.body.appendChild(conf);
-
-    setTimeout(() => conf.remove(), 3000);
-  }
-}
-
 document.getElementById("yesBtn").addEventListener("click", () => {
   confettiEffect();
-  nextPage();
 });
 
 const text = document.getElementById("typingText");
@@ -123,5 +107,37 @@ if (holdBtn) {
   showPage(currentPage);
 
   resetHold();
+  }
+}
+
+// ===== FLOATING BUBBLES =====
+
+const bubbleContainer = document.querySelector(".bubbles");
+
+if (bubbleContainer) {
+
+  const colors = [
+    "rgba(255, 182, 193, 0.6)",  // pink
+    "rgba(173, 216, 230, 0.6)",  // blue
+    "rgba(221, 160, 221, 0.6)",  // lavender
+    "rgba(255, 255, 255, 0.5)"   // white glow
+  ];
+
+  for (let i = 0; i < 12; i++) {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+
+    const size = Math.random() * 150 + 60;
+    bubble.style.width = size + "px";
+    bubble.style.height = size + "px";
+
+    bubble.style.left = Math.random() * 100 + "vw";
+
+    bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+    const duration = Math.random() * 10 + 15;
+    bubble.style.animationDuration = duration + "s";
+
+    bubbleContainer.appendChild(bubble);
   }
 }
