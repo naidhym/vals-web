@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valentine 💙💗</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="hearts"></div>
 
 <audio id="bgMusic" src="music/hanyakau.mp3" loop></audio>
 
@@ -39,7 +40,7 @@ I swear my heart just did a backflip.
 
 <!-- PAGE 3 -->
 <section class="page" id="page3">
-  <h2>Our Memories 💙</h2>
+  <h2>Our Memories 🎞️📼📽️🎬📺</h2>
 
   <div class="gallery-3">
     <img src="images/foto1.jpg">
@@ -101,10 +102,28 @@ And I think that says everything.
 
 <!-- PAGE 5 -->
 <section class="page" id="page5">
+  <div class="unlock-container">
+    <div class="progress-ring">
+      <svg width="200" height="200">
+        <circle class="progress-bg" cx="100" cy="100" r="85" />
+        <circle class="progress-bar" cx="100" cy="100" r="85" />
+      </svg>
+
+      <button id="holdButton">
+        Hold to Unlock <br> My Heart
+      </button>
+    </div>
+
+    <p class="unlock-text">Keep holding…</p>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page" id="page6">
   <h2>For You 💌</h2>
 
   <div class="love-card">
-    <p class="long-text">
+    <p class="long-text" id="typingText">
       Valentine isn’t about roses
 or fancy dinners.<br>
 
@@ -149,8 +168,8 @@ is the easiest thing my heart has ever done.
   <button class="nextBtn">One Last Thing ➜</button>
 </section>
 
-<!-- PAGE 6 -->
-<section class="page" id="page6">
+<!-- PAGE 7 -->
+<section class="page" id="page7">
   <h2>Your Valentine Gift</h2>
 
   <video class="coupon-video" autoplay loop muted playsinline>
